@@ -135,3 +135,44 @@ a:focus-visible { outline:2px solid var(--gold); outline-offset:6px; }
   .contact-link { gap:12px; } .contact-link strong { font-size:22px; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
+
+@media (min-width: 601px) {
+  /* 파일 선택 화면 */
+  .archive {
+    height: 100dvh;
+    min-height: 0;
+    padding: 16px 0;
+  }
+
+  .file-select {
+    min-height: 0;
+    padding: 45px 0 15px;
+  }
+
+  .files {
+    width: min(1000px, 100%, calc((100dvh - 200px) * 2));
+  }
+
+  .file-group {
+    height: min(490px, calc(100dvh - 200px));
+  }
+
+  .archive-footer h1 {
+    font-size: clamp(24px, 4vh, 40px);
+  }
+
+  /* 펼친 서류철 화면 */
+  .file-view {
+    height: 100dvh;
+    min-height: 0;
+    padding: 12px 30px;
+  }
+
+  .document {
+    width: min(1160px, 100%, calc((100dvh - 130px) * 1.5));
+  }
+
+  .document-content {
+    overflow-y: auto;
+  }
+}
