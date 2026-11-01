@@ -37,3 +37,9 @@ window.addEventListener('pageshow', (event) => {
     });
   }
 });
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    window.location.href = 'index.html#files';
+  }
+});
